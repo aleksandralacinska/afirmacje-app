@@ -56,9 +56,11 @@ const App = () => {
       <Affirmation text={affirmation} />
       <Button text="Losuj nową afirmację" onClick={refreshAffirmation} />
       {!isInstalled && installPrompt && (
-        <button className="btn install-btn" onClick={installApp}>
-          📲 Zainstaluj aplikację
-        </button>
+        <div className="install-btn-container">
+          <button className="btn install-btn" onClick={installApp}>
+            📲 Zainstaluj aplikację 📲
+          </button>
+        </div>
       )}
     </div>
   );

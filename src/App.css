@@ -82,10 +82,17 @@
 }
 
 .install-btn {
-  background: #ff9800;
+  background: transparent;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
   margin-top: 10px;
 }
 
 .install-btn:hover {
-  background: #e68900;
+  background: #e0be3c;
+  color: #333;
 }
