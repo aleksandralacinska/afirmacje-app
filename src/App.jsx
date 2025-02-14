@@ -1,11 +1,15 @@
 import { useState, useEffect } from "react";
 import Affirmation from "./components/Affirmation.jsx";
 import Button from "./components/Button.jsx";
+import affirmations from "./affirmations";
 import "./App.css";
 
 const App = () => {
   const [installPrompt, setInstallPrompt] = useState(null);
   const [isInstalled, setIsInstalled] = useState(false);
+  const [affirmation, setAffirmation] = useState(
+    affirmations[Math.floor(Math.random() * affirmations.length)]
+  );
 
   useEffect(() => {
     const handleBeforeInstallPrompt = (event) => {
@@ -38,12 +42,15 @@ const App = () => {
     }
   };
 
+  const refreshAffirmation = () => {
+    setAffirmation(affirmations[Math.floor(Math.random() * affirmations.length)]);
+  };
+
   return (
     <div className="app-container">
       <h1>Twoja codzienna afirmacja 🌟</h1>
-      <Affirmation />
-      <Button text="Losuj nową afirmację" onClick={() => window.location.reload()} />
-      
+      <Affirmation text={affirmation} />
+      <Button text="Losuj nową afirmację" onClick={refreshAffirmation} />
       {!isInstalled && installPrompt && (
         <button className="btn install-btn" onClick={installApp}>
           📲 Zainstaluj aplikację
