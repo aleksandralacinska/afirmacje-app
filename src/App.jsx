@@ -12,6 +12,10 @@ const App = () => {
   );
 
   useEffect(() => {
+    document.title = "Uśmiechnij się";
+    const favicon = document.querySelector("link[rel='icon']");
+    if (favicon) favicon.href = "/icon-192.png";
+
     const handleBeforeInstallPrompt = (event) => {
       event.preventDefault();
       console.log("Event beforeinstallprompt przechwycony!");
