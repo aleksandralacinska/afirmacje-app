@@ -3,6 +3,8 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: #242424;
+  color: #fff;
 }
 
 .logo {
@@ -55,14 +57,14 @@
   max-width: 400px;
   border-radius: 20px;
   box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
-  color: white;
+  color: #fff;
 }
 
 .affirmation-text {
   font-size: 20px;
   font-weight: bold;
   text-align: center;
-  color: #333;
+  color: #fff;
 }
 
 .btn {
