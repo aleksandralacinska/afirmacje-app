@@ -98,3 +98,38 @@
   background: #e0be3c;
   color: #333;
 }
+
+.humor-container {
+  text-align: center;
+  padding: 20px;
+  color: white;
+  background-color: #242424;
+  height: 100vh;
+}
+
+.back-btn {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px 15px;
+  background-color: #e0be3c;
+  color: #242424;
+  border-radius: 5px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.back-btn:hover {
+  background-color: #d4a835;
+}
+
+h1 {
+  margin-top: 60px;
+}
+
+blockquote {
+  font-style: italic;
+  font-size: 18px;
+  margin-top: 20px;
+}

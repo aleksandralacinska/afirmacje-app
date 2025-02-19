@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Affirmation from "./components/Affirmation.jsx";
 import Button from "./components/Button.jsx";
 import affirmations from "./affirmations";
+import Humor from "./components/Humor.jsx";
 import "./App.css";
 
 const App = () => {
@@ -51,18 +53,29 @@ const App = () => {
   };
 
   return (
-    <div className="app-container">
-      <h1>Twoja codzienna afirmacja 🌟</h1>
-      <Affirmation text={affirmation} />
-      <Button text="Losuj nową afirmację" onClick={refreshAffirmation} />
-      {!isInstalled && installPrompt && (
-        <div className="install-btn-container">
-          <button className="btn install-btn" onClick={installApp}>
-            📲 Zainstaluj aplikację 📲
-          </button>
-        </div>
-      )}
-    </div>
+    <Router>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <div className="app-container">
+              <h1>Twoja codzienna afirmacja 🌟</h1>
+              <Affirmation text={affirmation} />
+              <Button text="Losuj nową afirmację" onClick={refreshAffirmation} />
+              <Link to="/humor" className="btn humor-btn">Popraw mi humor</Link>
+              {!isInstalled && installPrompt && (
+                <div className="install-btn-container">
+                  <button className="btn install-btn" onClick={installApp}>
+                    📲 Zainstaluj aplikację 📲
+                  </button>
+                </div>
+              )}
+            </div>
+          }
+        />
+        <Route path="/humor" element={<Humor />} />
+      </Routes>
+    </Router>
   );
 };
 
