@@ -41,10 +41,16 @@ const Humor = () => {
     <div className="humor-container">
       <Link to="/" className="back-btn">⬅ Powrót</Link>
       <h1>Uśmiechnij się! 😄</h1>
-      <p>Oto losowy żart lub obrazek:</p>
+      <p>Oto losowy żart, który poprawi Ci humor:</p>
       {joke && <blockquote>{joke}</blockquote>}
-      {imageUrl && <img src={imageUrl} alt="Losowy mem" className="humor-image" style={{ maxWidth: "100%", height: "auto", maxHeight: "90vh" }} />}
-      <button className="btn" onClick={fetchJokes}>Losuj nowy</button>
+      {imageUrl && (
+        <div className="humor-image-container">
+          <img src={imageUrl} alt="Losowy mem" className="humor-image" style={{ maxWidth: "100%", height: "auto", maxHeight: "90vh" }} />
+        </div>
+      )}
+      <div className="button-container">
+        <button className="btn" onClick={fetchJokes}>Losuj nowy</button>
+      </div>
     </div>
   );
 };
