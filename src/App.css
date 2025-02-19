@@ -111,7 +111,7 @@
   display: inline-block;
   text-decoration: none;
   font-size: 16px;
-  padding: 10px 15px;
+  padding: 10px 20px;
   background-color: #e0be3c;
   color: #242424;
   border-radius: 5px;
@@ -121,7 +121,7 @@
 }
 
 .back-btn:hover {
-  background-color: #d4a835;
+  background-color: #fff;
 }
 
 h1 {
@@ -130,6 +130,7 @@ h1 {
 
 blockquote {
   font-style: italic;
-  font-size: 18px;
+  color: #e0be3c;
+  font-size: 20px;
   margin-top: 20px;
 }
